@@ -14,3 +14,4 @@ for (let i = 0; i < ingredients.length; i += 1) {
   liEl.textContent = `${ingredients[i]}`;
   listEl.appendChild(liEl);
 }
+
