@@ -14,21 +14,16 @@ const images = [
 ];
 const listImgEl = document.querySelector('.gallery');
 console.log(listImgEl);
+// Стилі для майбутньої галареї
 listImgEl.style.listStyle = 'none';
 listImgEl.style.display = 'flex';
 listImgEl.style.alignItems = 'center';
 listImgEl.style.gap = '25px';
-
-// images.forEach(image => {
-//   listImgEl.insertAdjacentHTML(
-//     'beforeend',
-//     `<li><img src = ${image.url} alt = ${image.alt}></li>`
-//   );
-// });
-
+// Цикл із створення галереї
 const markupEl = images
   .map(
     image => `<li><img src = ${image.url} alt = ${image.alt} width=250px></li>`
   )
   .join('');
+// Додавання всієї галереї за один раз
 listImgEl.insertAdjacentHTML('beforeend', markupEl);

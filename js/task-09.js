@@ -6,8 +6,9 @@ function getRandomHexColor() {
 
 const currentColor = document.querySelector('.color');
 const buttonEl = document.querySelector('.change-color');
-
+// Прослуховування подій натискання кнопки
 buttonEl.addEventListener('click', onChangeColor);
+// Функція зміни кольору фону
 function onChangeColor() {
   const getColor = getRandomHexColor();
   currentColor.textContent = getColor;

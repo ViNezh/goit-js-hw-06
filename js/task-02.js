@@ -7,11 +7,16 @@ const ingredients = [
   'Condiments',
 ];
 const listEl = document.querySelector('#ingredients');
-console.log(listEl);
-for (let i = 0; i < ingredients.length; i += 1) {
-  const liEl = document.createElement('li');
-  liEl.classList.add('item');
-  liEl.textContent = `${ingredients[i]}`;
-  listEl.appendChild(liEl);
-}
+// Створення фрагмента для зберігання списку li
+const fragment = document.createDocumentFragment();
 
+//Цикл із створення нових елементів li
+for (const ingredient of ingredients) {
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+  fragment.appendChild(liEl);
+  console.log(liEl);
+}
+// Додавання створеного списку за один раз
+listEl.appendChild(fragment);
