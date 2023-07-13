@@ -9,7 +9,7 @@ function onFormSubmit(event) {
   const email = elementsForm.email.value;
   const password = elementsForm.password.value;
   // Створення об'єкта із введеними значеннями
-  if (email !== '' || password !== '') {
+  if (email !== '' && password !== '') {
     const dataForm = { email, password };
     console.log(dataForm);
     event.currentTarget.reset();
