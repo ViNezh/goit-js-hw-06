@@ -16,7 +16,6 @@ for (const ingredient of ingredients) {
   liEl.textContent = ingredient;
   liEl.classList.add('item');
   fragment.appendChild(liEl);
-  // console.log(liEl);
-}
+ }
 // Додавання створеного списку за один раз
 listEl.appendChild(fragment);
